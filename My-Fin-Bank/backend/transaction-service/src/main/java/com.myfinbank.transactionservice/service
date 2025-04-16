@@ -1,0 +1,38 @@
+package com.myfinbank.transactionservice.service;
+
+import com.myfinbank.transactionservice.entity.Transaction;
+import com.myfinbank.transactionservice.repository.TransactionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class TransactionService {
+
+    @Autowired
+    private TransactionRepository transactionRepository;
+
+    public Transaction deposit(Transaction transaction) {
+        // Logic for deposit
+        return transactionRepository.save(transaction);
+    }
+
+    public Transaction withdraw(Transaction transaction) {
+        // Logic for withdrawal
+        return transactionRepository.save(transaction);
+    }
+
+    public Transaction transfer(Transaction transaction) {
+        // Logic for fund transfer
+        return transactionRepository.save(transaction);
+    }
+
+    public List<Transaction> getAllTransactions() {
+        return transactionRepository.findAll();
+    }
+
+    public Transaction getTransactionById(Long id) {
+        return transactionRepository.findById(id).orElse(null);
+    }
+}

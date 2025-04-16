@@ -1,0 +1,30 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /customer-service
+
+spring:
+  application:
+    name: customer-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/customerdb
+    username: your_username
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      prefer-ip: true
+
+jwt:
+  secret: your_jwt_secret
+  expiration: 3600

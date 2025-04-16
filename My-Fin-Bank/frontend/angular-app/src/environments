@@ -1,0 +1,11 @@
+{
+  "production": {
+    "apiUrl": "http://localhost:8080/api"
+  },
+  "development": {
+    "apiUrl": "http://localhost:8080/api"
+  },
+  "test": {
+    "apiUrl": "http://localhost:8080/api"
+  }
+}

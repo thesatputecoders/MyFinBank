@@ -1,0 +1,19 @@
+server:
+  port: 8761
+  context-path: /eureka
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  server:
+    enable-self-preservation: false
+
+spring:
+  application:
+    name: discovery-server
+
+logging:
+  level:
+    com.netflix.eureka: INFO
+    org.springframework.cloud.netflix.eureka: INFO
